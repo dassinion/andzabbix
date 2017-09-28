@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="menu">
+        <item>@string/zabbix_servers</item>
+        <item>@string/general_str</item>
+        <item>@string/triggers_config</item>
+        <item>@string/service_config</item>
+        <item>@string/other</item>
+        <!-- <item>@string/buy_pro_version</item> -->
+        <item>@string/support</item>
+    </string-array>
+    <string-array name="zcontrol">
+        <item>@string/hosts</item>
+        <item>@string/templates</item>
+        <item>@string/users</item>
+        <item>@string/user_groups</item>
+        <item>@string/mediatypes</item>
+        <item>@string/host_groups</item>
+        <item>@string/actions</item>
+        <item>@string/screens</item>
+        <item>@string/scripts</item>
+        <item>@string/proxies</item>
+        <item>@string/maintences</item>
+    </string-array>
+    <string-array name="SliderMenu">
+        <item>@string/active_triggers</item>
+        <item>@string/zabbix_control</item>
+        <item>@string/options</item>
+        <item>@string/overview</item>
+        <item>@string/graphs_host_list</item>
+        <item>@string/host_group</item>
+        <item>@string/maps</item>
+        <item>@string/favorite_graphs</item>
+    </string-array>
+    <string-array name="HostStatuses">
+        <item>@string/monitored</item>
+        <item>@string/not_monitored</item>
+    </string-array>
+    <string-array name="HostStatusValues">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="HostAvailability">
+        <item>@string/available</item>
+        <item>@string/unavailable</item>
+        <item>@string/unknown</item>
+    </string-array>
+    <string-array name="HostAvailabilityValues">
+        <item>1</item>
+        <item>2</item>
+        <item>0</item>
+    </string-array>
+    <string-array name="HostSortArray">
+        <item>@string/none</item>
+        <item>@string/host_id</item>
+        <item>@string/host_name</item>
+        <item>@string/status</item>
+    </string-array>
+    <string-array name="HostSortValArray">
+        <item>none</item>
+        <item>hostid</item>
+        <item>host</item>
+        <item>status</item>
+    </string-array>
+    <string-array name="UserTypes">
+        <item>@string/zabbix_user</item>
+        <item>@string/zabbix_admin</item>
+        <item>@string/zabbix_superadmin</item>
+    </string-array>
+    <string-array name="UserTypesVal">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="ZInterfacesTypes">
+        <item>Agent</item>
+        <item>SNMP</item>
+        <item>IPMI</item>
+        <item>JMX</item>
+    </string-array>
+    <string-array name="ZInterfacesTypesVal">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+    <string-array name="ScriptTypes">
+        <item>Script</item>
+        <item>IPMI</item>
+    </string-array>
+    <string-array name="ScriptTypesVal">
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="UpdateIntervals">
+        <item>5</item>
+        <item>10</item>
+        <item>15</item>
+        <item>30</item>
+        <item>45</item>
+        <item>60</item>
+        <item>90</item>
+        <item>120</item>
+        <item>240</item>
+    </string-array>
+    <string-array name="UpdateIntervalsString">
+        <item>5 минут</item>
+        <item>10 минут</item>
+        <item>15 минут</item>
+        <item>30 минут</item>
+        <item>45 минут</item>
+        <item>1 час</item>
+        <item>1,5 часа</item>
+        <item>2 часа</item>
+        <item>4 часа</item>
+    </string-array>
+    <string-array name="ConnectionTimeout">
+        <item>2</item>
+        <item>5</item>
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+        <item>25</item>
+        <item>30</item>
+        <item>45</item>
+        <item>60</item>
+    </string-array>
+    <string-array name="TimeCorrectionString">
+        <item>+1</item>
+        <item>+2</item>
+        <item>+3</item>
+        <item>+4</item>
+        <item>+5</item>
+        <item>+6</item>
+        <item>+7</item>
+        <item>+8</item>
+        <item>+9</item>
+        <item>+10</item>
+        <item>+11</item>
+        <item>+12</item>
+        <item>-1</item>
+        <item>-2</item>
+        <item>-3</item>
+        <item>-4</item>
+        <item>-5</item>
+        <item>-6</item>
+        <item>-7</item>
+        <item>-8</item>
+        <item>-9</item>
+        <item>-10</item>
+        <item>-11</item>
+        <item>-12</item>
+    </string-array>
+    <string-array name="TimeCorrection">
+        <item>3600</item>
+        <item>7200</item>
+        <item>10800</item>
+        <item>14400</item>
+        <item>18000</item>
+        <item>21600</item>
+        <item>25200</item>
+        <item>28800</item>
+        <item>32400</item>
+        <item>36000</item>
+        <item>39600</item>
+        <item>43200</item>
+        <item>-3600</item>
+        <item>-7200</item>
+        <item>-10800</item>
+        <item>-14400</item>
+        <item>-18000</item>
+        <item>-21600</item>
+        <item>-25200</item>
+        <item>-28800</item>
+        <item>-32400</item>
+        <item>-36000</item>
+        <item>-39600</item>
+        <item>-43200</item>
+    </string-array>
+    <string-array name="SliderMenuValues">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="TriggerCheckTypes">
+        <item>@string/default_str</item>
+        <item>@string/only_new_triggers</item>
+        <item>@string/only_active_triggerslt</item>
+    </string-array>
+    <string-array name="TriggerCheckTypesValues">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="TriggerTypes">
+        <item>@string/show_all_triggers</item>
+        <item>@string/show_all_active_triggers</item>
+        <item>@string/hide_triggers_with_disabled_host</item>
+        <item>@string/hide_triggers_with_disabled_item</item>
+    </string-array>
+    <string-array name="TriggerTypesValues">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="UserLanguages">
+        <item>English</item>
+        <item>Chinese</item>
+        <item>Czech</item>
+        <item>Dutch</item>
+        <item>French</item>
+        <item>German</item>
+        <item>Greek</item>
+        <item>Hungarian</item>
+        <item>Italian</item>
+        <item>Korean</item>
+        <item>Japanese</item>
+        <item>Latvian</item>
+        <item>Polish</item>
+        <item>Portuguese</item>
+        <item>Russian</item>
+        <item>Slovak</item>
+        <item>Spanish</item>
+        <item>Swedish</item>
+        <item>Turkish</item>
+        <item>Ukrainian</item>
+    </string-array>
+    <string-array name="UserLanguagesVal">
+        <item>en_GB</item>
+        <item>zh_CN</item>
+        <item>cs_CZ</item>
+        <item>nl_NL</item>
+        <item>fr_FR</item>
+        <item>de_DE</item>
+        <item>el_GR</item>
+        <item>hu_HU</item>
+        <item>it_IT</item>
+        <item>ko_KR</item>
+        <item>ja_JP</item>
+        <item>lv_LV</item>
+        <item>pl_PL</item>
+        <item>pt_BR</item>
+        <item>ru_RU</item>
+        <item>sk_SK</item>
+        <item>es_ES</item>
+        <item>sv_SE</item>
+        <item>tr_TR</item>
+        <item>uk_UA</item>
+    </string-array>
+    <string-array name="Themes">
+        <item>Ststem defautl</item>
+        <item>Classic</item>
+        <item>Original blue</item>
+        <item>Black and blue</item>
+        <item>Dark orange</item>
+    </string-array>
+    <string-array name="languages">
+        <item>System default</item>
+        <item>English</item>
+        <item>Russian</item>
+    </string-array>
+    <string-array name="languagesVal">
+        <item>default</item>
+        <item>en</item>
+        <item>ru</item>
+    </string-array>
+    <string-array name="serevity">
+        <item>@string/all</item>
+        <item>@string/information</item>
+        <item>@string/warning</item>
+        <item>@string/average</item>
+        <item>@string/high</item>
+        <item>@string/disaster</item>
+    </string-array>
+    <string-array name="serevity_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+</resources>

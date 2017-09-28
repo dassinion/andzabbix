@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="ZabbixDarkGrayStyle.Button">
+        <item name="android:background">@color/dkgray</item>
+        <item name="android:textColor">?android:textColorPrimary</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Button</item>
+        <item name="android:minHeight">48dip</item>
+        <item name="android:minWidth">88dip</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:gravity">center_vertical|center_horizontal</item>
+    </style>
+
+    <style name="ZabbixDarkGrayStyle" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimary">@color/dkgray</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/cyan</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:buttonStyle">@style/ZabbixDarkGrayStyle.Button</item>
+    </style>
+
+    <style name="ZabbixDarkGrayStyle.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AlertDialogCustom" parent="@style/Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:textColor">@color/background_floating_material_dark</item>
+        <item name="android:typeface">monospace</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColorPrimary">@color/background_floating_material_dark</item>
+        <item name="android:colorBackground">@color/background_floating_material_dark</item>
+    </style>
+
+    <style name="ZabbixDarkGrayStyle.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="ZabbixDarkGrayStyle.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+</resources>

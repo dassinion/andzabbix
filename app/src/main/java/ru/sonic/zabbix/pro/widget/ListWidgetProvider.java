@@ -1,0 +1,149 @@
+package ru.sonic.zabbix.pro.widget;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import android.app.AlarmManager;
+import android.app.PendingIntent;
+import android.appwidget.AppWidgetManager;
+import android.appwidget.AppWidgetProvider;
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.net.Uri;
+import android.os.SystemClock;
+import android.util.Log;
+
+import ru.sonic.zabbix.pro.activities.ActiveTrigerActivity;
+
+public class ListWidgetProvider extends AppWidgetProvider {
+    public static final String URI_SCHEME = "zabbix_widget_list";
+	
+	public static String ACTION_WIDGET_REFRESH = "ru.sonic.zabbix.pro.widget.listwidget.APPWIDGET_LISTREFRESH";
+	public static final String ACTION_ON_CLICK = "ru.sonic.zabbix.pro.widget.listwidget.itemonclick";
+	public static final String ITEM_POSITION = "item_position";
+	
+    //boolean updating = false;
+    //public String servername = "Server";
+    //public static String ACTION_WIDGET_CONFIGURE = "ConfigureWidget";
+	protected static final String TAG = "ListWidgetProvider";
+    Context ctx;
+    static AppWidgetManager appWgtMng;
+
+    @Override
+    public void onEnabled(Context context) {
+        super.onEnabled(context);
+    }
+    
+	@Override
+	public void onDisabled(Context context) {
+		super.onDisabled(context);
+	}
+
+    @Override
+    public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
+        super.onUpdate(context, appWidgetManager, appWidgetIds);
+        this.ctx = context;
+        this.appWgtMng = appWidgetManager;
+        Log.d(TAG, "OnUpdate started");
+        for (int appWidgetId: appWidgetIds) {
+        	Log.d(TAG, "OnUpdate ID: "+appWidgetId);
+        	SharedPreferences config = context.getSharedPreferences(ListWidgetControl.PREFS_NAME, 0);
+            int updateRateSeconds = config.getInt(String.format(ListWidgetControl.PREFS_UPDATE_RATE_FIELD_PATTERN, appWidgetId), -1);
+			String server_name = config.getString(String.format(GraphWidgetControl.PREFS_WIDGET_SERVER, appWidgetId),"");
+            if (updateRateSeconds != -1) {
+            	context.startService(new Intent(context, UpdateWidgetListService.class).putExtra("appWidgetId", appWidgetId).putExtra("server_name", server_name));
+            }
+        }
+    }
+
+	/*
+    public String getCurrentTime() {
+    	SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm");
+		Date now = new Date();
+		return dateFormat.format(now);
+    }
+	
+	public String getCurrentServer(int appWidgetId) {
+		SharedPreferences config = ctx.getSharedPreferences(ListWidgetControl.PREFS_NAME, 0);
+		return config.getString(String.format(ListWidgetControl.PREFS_WIDGET_SERVER, appWidgetId),"server");
+	}
+*/
+    @Override
+    public void onDeleted(Context context, int[] appWidgetIds) {
+        for (int appWidgetId : appWidgetIds) {
+            // stop alarm
+            Intent widgetUpdate = new Intent();
+            widgetUpdate.setAction(AppWidgetManager.ACTION_APPWIDGET_UPDATE);
+            widgetUpdate.putExtra(AppWidgetManager.EXTRA_APPWIDGET_ID, appWidgetId);
+            widgetUpdate.setData(Uri.withAppendedPath(Uri.parse(URI_SCHEME + "://widget/id/"), String.valueOf(appWidgetId)));
+            PendingIntent newPending = PendingIntent.getBroadcast(context, 0, widgetUpdate, PendingIntent.FLAG_UPDATE_CURRENT);
+
+            AlarmManager alarms = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
+            alarms.cancel(newPending);
+
+            // remove preference
+            //Log.d(LOG_TAG, "Removing preference for id " + appWidgetId);
+            SharedPreferences config = context.getSharedPreferences(ListWidgetControl.PREFS_NAME, 0);
+            SharedPreferences.Editor configEditor = config.edit();
+
+            configEditor.remove(String.format(ListWidgetControl.PREFS_UPDATE_RATE_FIELD_PATTERN, appWidgetId));
+            configEditor.remove(String.format(ListWidgetControl.PREFS_WIDGET_SERVER, appWidgetId));
+            configEditor.commit();
+        }
+        super.onDeleted(context, appWidgetIds);
+    }
+
+    @Override
+    public void onReceive(Context context, Intent intent) {
+    	super.onReceive(context, intent);
+    	//Bundle extras = intent.getExtras();
+    	
+    	try {
+	    	this.ctx = context;
+	        final String action = intent.getAction();
+	        Log.d(TAG, "OnReceive:Action: " + action);
+	        SharedPreferences config = context.getSharedPreferences(ListWidgetControl.PREFS_NAME, 0);
+	        if (context != null && intent != null)
+	        if (AppWidgetManager.ACTION_APPWIDGET_UPDATE.equals(action)) {
+	            if (!URI_SCHEME.equals(intent.getScheme())) {
+	                final int[] appWidgetIds = intent.getExtras().getIntArray(AppWidgetManager.EXTRA_APPWIDGET_IDS);
+	                for (int appWidgetId : appWidgetIds) {
+	                    int updateRateSeconds = config.getInt(String.format(ListWidgetControl.PREFS_UPDATE_RATE_FIELD_PATTERN, appWidgetId), -1);
+						String server_name = config.getString(String.format(GraphWidgetControl.PREFS_WIDGET_SERVER, appWidgetId),"");
+	                    if (updateRateSeconds != -1) {
+	                        //Log.i(TAG, "Starting recurring alarm for id " + appWidgetId);
+	                        Intent widgetUpdate = new Intent();
+	                        widgetUpdate.setAction(AppWidgetManager.ACTION_APPWIDGET_UPDATE);
+	                        widgetUpdate.putExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS, new int[] { appWidgetId });
+	
+	                        widgetUpdate.setData(Uri.withAppendedPath(Uri.parse(ListWidgetProvider.URI_SCHEME + "://widget/id/"), String.valueOf(appWidgetId)));
+	                        PendingIntent newPending = PendingIntent.getBroadcast(context, 0, widgetUpdate, PendingIntent.FLAG_UPDATE_CURRENT);
+	
+	                        AlarmManager alarms = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
+	                        alarms.setRepeating(AlarmManager.ELAPSED_REALTIME, SystemClock.elapsedRealtime(), updateRateSeconds * 60000, newPending);
+	                        
+	                        context.startService(new Intent(context, UpdateWidgetListService.class).putExtra("appWidgetId", appWidgetId).putExtra("server_name", server_name));
+	                    }
+	                }
+	            }
+	        } else if (action.equals(ACTION_WIDGET_REFRESH)) {
+	            int appWidgetId = intent.getExtras().getInt("appWidgetId");
+				String server_name = intent.getExtras().getString("server_name");
+	            Log.d(TAG, "OnReceiver refresh button. WID: "+appWidgetId);
+	            context.startService(new Intent(context, UpdateWidgetListService.class).putExtra("appWidgetId", appWidgetId).putExtra("server_name", server_name));
+	        } else if (intent.getAction().equalsIgnoreCase(ACTION_ON_CLICK)) {
+	            int itemPos = intent.getIntExtra(ITEM_POSITION, -1);
+	            if (itemPos != -1) {
+	            	//Toast.makeText(context, "Clicked on item " + itemPos,Toast.LENGTH_SHORT).show();
+	            	Intent ActiveTriggers = new Intent(context,ActiveTrigerActivity.class);
+		            ActiveTriggers.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+		            context.startActivity(ActiveTriggers);
+	            }
+	        }
+    	} catch (Exception e) {
+    		e.printStackTrace();
+    	}
+        super.onReceive(context, intent);
+    }
+}

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+    android:configure="ru.sonic.zabbix.pro.widget.TxtTriggsWidgetControl"
+    android:initialLayout="@layout/widget_layout_txttrgs"
+    android:minHeight="40dip"
+    android:minWidth="80dip"
+    android:resizeMode="horizontal|vertical"
+    android:widgetCategory="home_screen|keyguard" />

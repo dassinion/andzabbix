@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF" >
+
+    <PreferenceCategory android:title="@string/fixes" >
+        <!--<CheckBoxPreference
+            android:key="old_zbx_fix"
+            android:summary="@string/fix_summary"
+            android:title="@string/fix_title" /> -->
+        <CheckBoxPreference
+            android:key="internet_check_fix"
+            android:defaultValue="true"
+            android:summary="@string/fix_internet_summary"
+            android:title="@string/fix_internet_title" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/time_zone_correction" >
+        <CheckBoxPreference
+            android:key="use_timecorrection"
+            android:summary="@string/time_zone_correction_summary"
+            android:title="@string/time_zone_correction" />
+
+        <ListPreference
+            android:defaultValue="0"
+            android:dialogTitle="@string/time_zone_correction"
+            android:entries="@array/TimeCorrectionString"
+            android:entryValues="@array/TimeCorrection"
+            android:inputType="number"
+            android:key="time_correction"
+            android:title="@string/time_zone_correction" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/auto_refresh" >
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="use_auto_reftriggers"
+            android:summary="@string/auto_refresh_sumary"
+            android:title="@string/auto_refresh" />
+
+        <ListPreference
+            android:defaultValue="30"
+            android:dialogTitle="@string/auto_refresh_period"
+            android:entries="@array/UpdateIntervals"
+            android:entryValues="@array/UpdateIntervals"
+            android:inputType="number"
+            android:key="autoref_period"
+            android:title="@string/auto_refresh_period" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

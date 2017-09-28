@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/servername_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/screen_wait_graph"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/wait"
+        android:visibility="gone" />
+
+    <!-- Server Name -->
+
+    <LinearLayout
+        android:id="@+id/screen_main_graph"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="visible" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/server" >
+        </TextView>
+
+        <Spinner
+            android:id="@+id/widget_graph_server_spinner"
+            android:layout_width="fill_parent"
+            android:enabled="false"
+            android:layout_height="wrap_content" >
+        </Spinner>
+
+        <!-- Host Name -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/host" >
+        </TextView>
+
+        <Spinner
+            android:id="@+id/widget_graph_host_spinner"
+            android:layout_width="fill_parent"
+            android:enabled="false"
+            android:layout_height="wrap_content" >
+        </Spinner>
+
+        <!-- Graph Name -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/graph" >
+        </TextView>
+
+        <Spinner
+            android:id="@+id/widget_graph_graph_spinner"
+            android:layout_width="fill_parent"
+            android:enabled="false"
+            android:layout_height="wrap_content" >
+        </Spinner>
+
+        <!-- Update Interval -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/update_interval" >
+        </TextView>
+
+        <Spinner
+            android:id="@+id/widget_graph_update_rate_entry_spinner"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:entries="@array/UpdateIntervalsString"
+            android:entryValues="@array/UpdateIntervals" >
+        </Spinner>
+
+        <!-- Save button -->
+
+        <Button
+            android:id="@+id/widget_graph_save_btn"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:enabled="false"
+            android:text="@string/ok" >
+        </Button>
+
+        <TextView
+            android:id="@+id/need_buy_graph_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/need_buy" >
+        </TextView>
+
+        <Button
+            android:id="@+id/widget_graph_buy"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:onClick="onBuyWidgetButtonClicked"
+            android:text="@string/buy" >
+        </Button>
+    </LinearLayout>
+
+</LinearLayout>

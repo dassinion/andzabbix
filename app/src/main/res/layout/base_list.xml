@@ -1,0 +1,103 @@
+<android.support.v4.widget.DrawerLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:background="@color/dkgray"
+    android:layout_height="match_parent" >
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeToRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <RelativeLayout
+            android:id="@+id/content_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ListView
+                android:id="@android:id/list"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:cacheColorHint="#00000000"
+                android:background="@color/dkgray"
+                android:layout_alignParentTop="true"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="10.0sp"
+                android:fadingEdge="none" >
+            </ListView>
+
+        <LinearLayout
+            android:id="@+id/filter_ll"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:orientation="horizontal"
+            android:layout_below="@android:id/list"
+            android:visibility="gone" >
+
+            <EditText
+                android:id="@+id/edtttext_host_filter"
+                android:layout_width="fill_parent"
+                android:textColor="@android:color/white"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:ems="10"
+                android:singleLine="true" >
+            </EditText>
+        </LinearLayout>
+
+<!--        <fragment
+            android:id="@+id/adFragment"
+            android:name="ru.sonic.zabbix.activities.DefaultZabbixListActivity$AdFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true" /> -->
+
+        </RelativeLayout>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <!-- The navigation drawer -->
+
+    <RelativeLayout
+        android:id="@+id/left_driver_rlayout"
+        android:layout_width="240dp"
+        android:layout_gravity="start"
+        android:background="@color/dkgray"
+        android:layout_height="match_parent">
+        <Spinner
+            android:id="@+id/left_drawer_server_spinner"
+            android:background="@color/dkgray"
+            android:popupBackground="@color/dkgray"
+            android:layout_height="50dip"
+            android:layout_marginLeft="20dip"
+            android:gravity="center"
+            android:visibility="gone"
+            android:dividerHeight="2dip"
+            android:layout_width="match_parent">
+        </Spinner>
+        <View
+            android:id="@+id/divider"
+            android:layout_below="@id/left_drawer_server_spinner"
+            android:layout_width="fill_parent"
+            android:layout_height="4dp"
+            android:layout_marginLeft="30dip"
+            android:layout_marginRight="30dip"
+            android:background="@android:color/darker_gray"/>
+        <ListView
+            android:id="@+id/left_drawer"
+            android:layout_below="@id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:choiceMode="singleChoice"
+            android:background="@color/dkgray"
+            android:textColor="@android:color/white"
+            android:divider="@drawable/slidermenu_divider"
+            android:dividerHeight="2dp" />
+    </RelativeLayout>
+
+</android.support.v4.widget.DrawerLayout>

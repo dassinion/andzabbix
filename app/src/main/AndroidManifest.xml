@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ru.sonic.zabbix.pro"
+    android:installLocation="auto"
+    android:versionCode="69"
+    android:versionName="0.99" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="23" />
+        
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:theme="@style/ZabbixDarkGrayStyle.NoActionBar"
+        android:label="@string/app_name" >
+        <meta-data android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <activity android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:theme="@android:style/Theme.Translucent" />
+        <activity
+            android:name=".activities.ActiveTrigerActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".config.ServicePrefActivity"
+            android:icon="@drawable/icon"
+            android:label="@string/service_config" >
+        </activity>
+        <activity
+            android:name=".config.ChecksPrefActivity"
+            android:icon="@drawable/icon"
+            android:label="@string/settings" >
+        </activity>
+        <activity
+            android:name=".config.ConfigurationActivity"
+            android:configChanges="orientation|screenSize"
+            android:icon="@drawable/icon"
+            android:label="@string/settings" >
+        </activity>
+        <activity
+            android:name=".config.GeneralPrefActivity"
+            android:icon="@drawable/icon"
+            android:label="@string/settings" >
+        </activity>
+        <activity
+            android:name=".config.OtherPrefActivity"
+            android:icon="@drawable/icon"
+            android:label="@string/other" >
+        </activity>
+        <activity
+            android:name=".activities.FilterActivity"
+            android:icon="@drawable/icon"
+            android:label="@string/filters_and_sorting" >
+        </activity>
+        <activity
+            android:name=".activities.GraphsFilterActivity"
+            android:icon="@drawable/icon"
+            android:label="@string/filters_and_sorting" >
+        </activity>
+        <activity
+            android:name=".activities.HostGroupActivity"
+            android:configChanges="orientation|screenSize"
+            android:icon="@drawable/icon"
+            android:label="@string/host_groups_list" >
+        </activity>
+        <activity
+            android:name=".activities.HostListActivity"
+            android:configChanges="orientation|screenSize"
+            android:icon="@drawable/icon"
+            android:label="@string/hosts_list" >
+        </activity>
+        <activity
+            android:name=".activities.DHostListActivity"
+            android:icon="@drawable/icon"
+            android:label="@string/hosts_list" >
+        </activity>
+        <activity
+            android:name=".activities.ItemListActivity"
+            android:configChanges="orientation|screenSize"
+            android:icon="@drawable/icon"
+            android:label="@string/overview" >
+        </activity>
+        <activity
+            android:name=".activities.ItemHistActivity"
+            android:configChanges="orientation|screenSize"
+            android:icon="@drawable/icon"
+            android:label="@string/item_history" >
+        </activity>
+        <activity
+            android:name=".activities.GraphHostsActivity"
+            android:configChanges="orientation|screenSize"
+            android:icon="@drawable/icon"
+            android:label="@string/graphs_host_list" >
+        </activity>
+        <activity
+            android:name=".activities.GraphsListActivity"
+            android:configChanges="orientation|screenSize"
+            android:icon="@drawable/icon"
+            android:label="@string/graphs_list" >
+        </activity>
+        <activity
+            android:name=".activities.ChartActivity"
+            android:configChanges="orientation|screenSize"
+            android:icon="@drawable/icon"
+            android:label="@string/graph" >
+        </activity>
+        <activity
+            android:name=".config.ServerListActivity"
+            android:configChanges="orientation|screenSize"
+            android:icon="@drawable/icon"
+            android:label="@string/zabbix_servers" >
+        </activity>
+        <activity
+            android:name=".config.ServerActivity"
+            android:configChanges="orientation|screenSize"
+            android:icon="@drawable/icon"
+            android:label="@string/server_config" >
+        </activity>
+        <activity
+            android:name=".activities.EventListActivity"
+            android:configChanges="orientation|screenSize"
+            android:icon="@drawable/icon"
+            android:label="@string/events_list" >
+        </activity>
+        <activity
+            android:name=".activities.MapsListActivity"
+            android:configChanges="orientation|screenSize"
+            android:icon="@drawable/icon"
+            android:label="@string/maps" >
+        </activity>
+        <activity
+            android:name=".activities.MapActivity"
+            android:icon="@drawable/icon"
+            android:label="@string/map" >
+        </activity>
+        <activity
+            android:name=".activities.ScreensListActivity"
+            android:icon="@drawable/icon"
+            android:label="@string/screens_list" >
+        </activity>
+        <activity
+            android:name=".activities.ScreenActivity"
+            android:icon="@drawable/icon"
+            android:label="@string/screen" >
+        </activity>
+        <activity
+            android:name=".activities.FavoriteGraphsListActivity"
+            android:icon="@drawable/icon"
+            android:label="@string/favorite_graphs" >
+        </activity>
+
+        <receiver
+            android:name=".service.ZBXCheckRepeetingService"
+            android:process=":remote" />
+
+        <service
+            android:name=".service.ZBXCheckService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <receiver
+            android:name=".service.ZBXautostartReceiver"
+            android:enabled="true"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".widget.TxtTriggsWidgetControl"
+            android:icon="@drawable/icon"
+            android:label="@string/widget_configuration" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".widget.ListWidgetControl"
+            android:icon="@drawable/icon"
+            android:label="@string/widget_configuration" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".widget.GraphWidgetControl"
+            android:icon="@drawable/icon"
+            android:label="@string/widget_configuration" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".widget.UpdateWidgetTXTService"
+            android:exported="false" />
+        <service
+            android:name=".widget.UpdateWidgetGraphService"
+            android:exported="false" />
+        <service
+            android:name=".widget.UpdateWidgetListService"
+            android:exported="false"
+            android:permission="android.permission.BIND_REMOTEVIEWS" />
+        <service
+            android:name=".widget.ListWidgetRVService"
+            android:permission="android.permission.BIND_REMOTEVIEWS" />
+
+        <receiver
+            android:name=".widget.TxtTriggsWidgetProvider"
+            android:label="@string/widget_txt" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="android.appwidget.action.ACTION_WIDGET_REFRESH" />
+                <action android:name="android.appwidget.action.ACTION_WIDGET_SETTINGS" />
+                <action android:name="android.appwidget.action.ACTION_WIDGET_TRIGGERSLIST" />
+                <action android:name="android.appwidget.action.APPWIDGET_NEXTTRIGGER" />
+                <data android:scheme="zabbix_widget_text" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <data android:scheme="zabbix_widget_text" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="ZABBIX_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_txttrigs" />
+        </receiver>
+        <receiver
+            android:name=".widget.GraphWidgetProvider"
+            android:label="@string/widget_graph" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <data android:scheme="zabbix_widget_graph" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_graph" />
+        </receiver>
+        <receiver
+            android:name=".widget.ListWidgetProvider"
+            android:label="@string/widget_list" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <data android:scheme="zabbix_widget_list" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_list" />
+        </receiver>
+
+        <activity
+            android:name=".ZControl.ProxiesActivity"
+            android:configChanges="orientation|screenSize"
+            android:icon="@drawable/icon"
+            android:label="@string/proxies" >
+        </activity>
+        <activity
+            android:name=".ZControl.ZControlActivity"
+            android:configChanges="orientation|screenSize"
+            android:icon="@drawable/icon"
+            android:label="@string/zabbix_control" >
+        </activity>
+        <activity
+            android:name=".ZControl.ScreensListActivity"
+            android:configChanges="orientation|screenSize"
+            android:icon="@drawable/icon"
+            android:label="@string/screens_list" >
+        </activity>
+        <activity
+            android:name=".ZControl.ScreenActivity"
+            android:configChanges="orientation|screenSize"
+            android:icon="@drawable/icon"
+            android:label="@string/screen" >
+        </activity>
+        <activity
+            android:name=".ZControl.UsersActivity"
+            android:configChanges="orientation|screenSize"
+            android:icon="@drawable/icon"
+            android:label="@string/users" >
+        </activity>
+        <activity
+            android:name=".ZControl.UserCreateActivity"
+            android:configChanges="orientation|screenSize"
+            android:icon="@drawable/icon"
+            android:label="@string/user_information" >
+        </activity>
+        <activity
+            android:name=".ZControl.UserGroupsActivity"
+            android:configChanges="orientation|screenSize"
+            android:icon="@drawable/icon"
+            android:label="@string/user_groups" >
+        </activity>
+        <activity
+            android:name=".ZControl.TemplatesActivity"
+            android:configChanges="orientation|screenSize"
+            android:icon="@drawable/icon"
+            android:label="@string/templates" >
+        </activity>
+        <activity
+            android:name=".ZControl.ApplicationsActivity"
+            android:configChanges="orientation|screenSize"
+            android:icon="@drawable/icon"
+            android:label="@string/applications" >
+        </activity>
+        <activity
+            android:name=".ZControl.ScriptsActivity"
+            android:configChanges="orientation|screenSize"
+            android:icon="@drawable/icon"
+            android:label="@string/scripts" >
+        </activity>
+        <activity
+            android:name=".ZControl.ActionsListActivity"
+            android:configChanges="orientation|screenSize"
+            android:icon="@drawable/icon"
+            android:label="@string/actions" >
+        </activity>
+        <activity
+            android:name=".ZControl.HostControlActivity"
+            android:configChanges="orientation|screenSize"
+            android:icon="@drawable/icon"
+            android:label="@string/hosts_control" >
+        </activity>
+        <activity
+            android:name=".ZControl.HostCreateActivity"
+            android:configChanges="orientation|screenSize"
+            android:icon="@drawable/icon"
+            android:label="@string/host_config" >
+        </activity>
+        <activity
+            android:name=".ZControl.HostGroupsControl"
+            android:configChanges="orientation|screenSize"
+            android:icon="@drawable/icon"
+            android:label="@string/hostgroup_config" >
+        </activity>
+        <activity
+            android:name=".ZControl.MediatypeControlActivity"
+            android:configChanges="orientation|screenSize"
+            android:icon="@drawable/icon"
+            android:label="@string/mediatypes" >
+        </activity>
+        <activity
+            android:name=".ZControl.MaintencesListActivity"
+            android:configChanges="orientation|screenSize"
+            android:icon="@drawable/icon"
+            android:label="@string/maintences" >
+        </activity>
+
+    </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="com.android.vending.BILLING" />
+
+
+</manifest>

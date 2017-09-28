@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/hostfilterll"
+    android:layout_width="fill_parent"
+    android:background="@color/dkgray"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/show_hosts_only"
+        android:textSize="16dp" />
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <CheckBox
+                android:id="@+id/onlyWithItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/with_items" />
+
+            <CheckBox
+                android:id="@+id/onlyMonItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/with_monitored_items" />
+
+            <CheckBox
+                android:id="@+id/onlyHistItems"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/with_historical_items" />
+
+            <CheckBox
+                android:id="@+id/onlyWithTriggers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/with_triggers" />
+
+            <CheckBox
+                android:id="@+id/onlyMonTrig"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/with_monitored_triggers" />
+
+            <CheckBox
+                android:id="@+id/onlyHttpTest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/with_http_tests" />
+
+            <CheckBox
+                android:id="@+id/onlyMonHttpTest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/with_monitored_http_tests" />
+
+            <CheckBox
+                android:id="@+id/onlyithGraphs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/with_graphs" />
+
+            <CheckBox
+                android:id="@+id/retProxies"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/proxyes" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:id="@+id/graphwlayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@android:color/transparent"
+        android:orientation="vertical" >
+
+        <!-- Graph name -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/widget_graph_text01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:paddingLeft="10dip"
+                android:paddingTop="0dip"
+                android:singleLine="true"
+                android:text="@string/server"
+                android:textColor="#FFFFFF"
+                android:textSize="10dp" />
+
+            <!-- Some text -->
+
+            <TextView
+                android:id="@+id/widget_graph_text02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:paddingLeft="10dip"
+                android:paddingTop="0dip"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="#FFFFFF"
+                android:textSize="10dp" />
+
+            <TextView
+                android:id="@+id/widget_graph_text03"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:paddingLeft="10dip"
+                android:paddingTop="0dip"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="#FFFFFF"
+                android:textSize="10dp" />
+        </LinearLayout>
+
+        <!-- Graph -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/widget_graph_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ok_bb" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- BUTTONS -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/widget_graph_triggerlist"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:text="" >
+        </Button>
+
+        <Button
+            android:id="@+id/widget_graph_refresh"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:text="" >
+
+            <!-- android:background="@android:color/transparent" -->
+        </Button>
+    </LinearLayout>
+
+</FrameLayout>

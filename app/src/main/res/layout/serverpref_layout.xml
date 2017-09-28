@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/dkgray"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="fill_parent"
+        android:background="@color/dkgray"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="20px"
+                android:layout_height="wrap_content"
+                android:text="@string/server_name" >
+            </TextView>
+
+            <EditText
+                android:id="@+id/prefServerName"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:autoText="false"
+                android:inputType="text"
+                android:textColor="@color/white"
+                android:layout_marginLeft="20px"
+                android:singleLine="true" >
+            </EditText>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20px"
+                android:text="@string/server_url" >
+            </TextView>
+
+            <EditText
+                android:id="@+id/prefServerUrl"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:layout_marginLeft="20px"
+                android:textColor="@color/white"
+                android:text="" >
+            </EditText>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20px"
+                android:text="@string/user" >
+            </TextView>
+
+            <EditText
+                android:id="@+id/prefServerUser"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:layout_marginLeft="20px"
+                android:textColor="@color/white"
+                android:singleLine="true"
+                android:text="" >
+            </EditText>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20px"
+                android:text="@string/password" >
+            </TextView>
+
+            <EditText
+                android:id="@+id/prefServerPass"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:password="true"
+                android:layout_marginLeft="20px"
+                android:textColor="@color/white"
+                android:singleLine="true"
+                android:text="" >
+            </EditText>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20px"
+                android:text="@string/connection_timeout" >
+            </TextView>
+
+            <Spinner
+                android:id="@+id/prefConnTimeout"
+                android:layout_width="fill_parent"
+                android:layout_marginLeft="20px"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content"
+                android:entries="@array/ConnectionTimeout" >
+            </Spinner>
+
+            <CheckBox
+                android:id="@+id/use_base_auth"
+                android:layout_marginLeft="20px"
+                android:layout_width="wrap_content"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content"
+                android:text="@string/use_base_autentification" />
+
+            <TextView
+                android:id="@+id/base_auth_user_txt"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="20px"
+                android:layout_height="wrap_content"
+                android:text="@string/base_auth_user" >
+            </TextView>
+
+            <EditText
+                android:id="@+id/base_auth_user"
+                android:layout_width="fill_parent"
+                android:layout_marginLeft="20px"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:text="" >
+            </EditText>
+
+            <TextView
+                android:id="@+id/base_auth_pass_txt"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="20px"
+                android:layout_height="wrap_content"
+                android:text="@string/base_auth_password" >
+            </TextView>
+
+            <EditText
+                android:id="@+id/base_auth_pass"
+                android:layout_width="fill_parent"
+                android:layout_marginLeft="20px"
+                android:layout_height="wrap_content"
+                android:password="true"
+                android:textColor="@color/white"
+                android:singleLine="true"
+                android:text="" >
+            </EditText>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF" >
+
+    <PreferenceCategory android:title="@string/multiservers" >
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="multiserver_support"
+            android:summary="@string/multiserver_summary"
+            android:title="@string/myltiserver_title" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/language" >
+
+        <ListPreference
+            android:defaultValue="default"
+            android:entries="@array/languages"
+            android:entryValues="@array/languagesVal"
+            android:key="language"
+            android:summary="@string/language_summary"
+            android:title="@string/language" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/triggers_interface" >
+
+        <CheckBoxPreference
+            android:key="use_modern_colors"
+            android:summary="@string/modern_colors_summary"
+            android:defaultValue="false"
+            android:title="@string/modern_colors" />
+
+        <CheckBoxPreference
+            android:key="ignoreWrongSSLCert"
+            android:defaultValue="true"
+            android:summary="Activate it if use selfsigned certificates"
+            android:title="Ignore wrong SSL cert" />
+
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

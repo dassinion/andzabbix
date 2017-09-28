@@ -1,0 +1,611 @@
+-- Merging decision tree log ---
+manifest
+ADDED from AndroidManifest.xml:2:1
+	package
+		ADDED from AndroidManifest.xml:3:5
+		INJECTED from AndroidManifest.xml:0:0
+		INJECTED from AndroidManifest.xml:0:0
+	android:versionName
+		ADDED from AndroidManifest.xml:6:5
+	android:versionCode
+		ADDED from AndroidManifest.xml:5:5
+		INJECTED from AndroidManifest.xml:0:0
+		INJECTED from AndroidManifest.xml:0:0
+	xmlns:android
+		ADDED from AndroidManifest.xml:2:11
+	android:installLocation
+		ADDED from AndroidManifest.xml:4:5
+uses-sdk
+ADDED from AndroidManifest.xml:8:5
+MERGED from com.android.support:support-v4:20.0.0:16:5
+MERGED from com.android.support:appcompat-v7:20.0.0:16:5
+MERGED from com.android.support:support-v4:20.0.0:16:5
+MERGED from com.google.android.gms:play-services:5.0.89:15:5
+MERGED from com.android.support:support-v4:20.0.0:16:5
+	android:targetSdkVersion
+		ADDED from AndroidManifest.xml:10:9
+		INJECTED from AndroidManifest.xml:0:0
+		INJECTED from AndroidManifest.xml:0:0
+	android:minSdkVersion
+		ADDED from AndroidManifest.xml:9:9
+		INJECTED from AndroidManifest.xml:0:0
+		INJECTED from AndroidManifest.xml:0:0
+application
+ADDED from AndroidManifest.xml:12:5
+MERGED from com.android.support:support-v4:20.0.0:17:5
+MERGED from com.android.support:appcompat-v7:20.0.0:17:5
+MERGED from com.android.support:support-v4:20.0.0:17:5
+MERGED from com.google.android.gms:play-services:5.0.89:16:5
+MERGED from com.android.support:support-v4:20.0.0:17:5
+	android:label
+		ADDED from AndroidManifest.xml:16:9
+	android:allowBackup
+		ADDED from AndroidManifest.xml:13:9
+	android:icon
+		ADDED from AndroidManifest.xml:14:9
+	android:theme
+		ADDED from AndroidManifest.xml:15:9
+meta-data#com.google.android.gms.version
+ADDED from AndroidManifest.xml:17:9
+	android:value
+		ADDED from AndroidManifest.xml:18:13
+	android:name
+		ADDED from AndroidManifest.xml:17:20
+activity#com.google.android.gms.ads.AdActivity
+ADDED from AndroidManifest.xml:19:9
+	android:configChanges
+		ADDED from AndroidManifest.xml:20:13
+	android:theme
+		ADDED from AndroidManifest.xml:21:13
+	android:name
+		ADDED from AndroidManifest.xml:19:19
+activity#ru.sonic.zabbix.pro.activities.ActiveTriggerActivity
+ADDED from AndroidManifest.xml:22:9
+	android:label
+		ADDED from AndroidManifest.xml:24:13
+	android:name
+		ADDED from AndroidManifest.xml:23:13
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from AndroidManifest.xml:25:13
+action#android.intent.action.MAIN
+ADDED from AndroidManifest.xml:26:17
+	android:name
+		ADDED from AndroidManifest.xml:26:25
+category#android.intent.category.LAUNCHER
+ADDED from AndroidManifest.xml:27:17
+	android:name
+		ADDED from AndroidManifest.xml:27:27
+activity#ru.sonic.zabbix.pro.config.ServicePrefActivity
+ADDED from AndroidManifest.xml:30:9
+	android:label
+		ADDED from AndroidManifest.xml:33:13
+	android:icon
+		ADDED from AndroidManifest.xml:32:13
+	android:name
+		ADDED from AndroidManifest.xml:31:13
+activity#ru.sonic.zabbix.pro.config.ChecksPrefActivity
+ADDED from AndroidManifest.xml:35:9
+	android:label
+		ADDED from AndroidManifest.xml:38:13
+	android:icon
+		ADDED from AndroidManifest.xml:37:13
+	android:name
+		ADDED from AndroidManifest.xml:36:13
+activity#ru.sonic.zabbix.pro.config.ConfigurationActivity
+ADDED from AndroidManifest.xml:40:9
+	android:label
+		ADDED from AndroidManifest.xml:44:13
+	android:configChanges
+		ADDED from AndroidManifest.xml:42:13
+	android:icon
+		ADDED from AndroidManifest.xml:43:13
+	android:name
+		ADDED from AndroidManifest.xml:41:13
+activity#ru.sonic.zabbix.pro.config.GeneralPrefActivity
+ADDED from AndroidManifest.xml:46:9
+	android:label
+		ADDED from AndroidManifest.xml:49:13
+	android:icon
+		ADDED from AndroidManifest.xml:48:13
+	android:name
+		ADDED from AndroidManifest.xml:47:13
+activity#ru.sonic.zabbix.pro.config.OtherPrefActivity
+ADDED from AndroidManifest.xml:51:9
+	android:label
+		ADDED from AndroidManifest.xml:54:13
+	android:icon
+		ADDED from AndroidManifest.xml:53:13
+	android:name
+		ADDED from AndroidManifest.xml:52:13
+activity#ru.sonic.zabbix.pro.activities.FilterActivity
+ADDED from AndroidManifest.xml:56:9
+	android:label
+		ADDED from AndroidManifest.xml:59:13
+	android:icon
+		ADDED from AndroidManifest.xml:58:13
+	android:name
+		ADDED from AndroidManifest.xml:57:13
+activity#ru.sonic.zabbix.pro.activities.GraphsFilterActivity
+ADDED from AndroidManifest.xml:61:9
+	android:label
+		ADDED from AndroidManifest.xml:64:13
+	android:icon
+		ADDED from AndroidManifest.xml:63:13
+	android:name
+		ADDED from AndroidManifest.xml:62:13
+activity#ru.sonic.zabbix.pro.activities.HostGroupActivity
+ADDED from AndroidManifest.xml:66:9
+	android:label
+		ADDED from AndroidManifest.xml:70:13
+	android:configChanges
+		ADDED from AndroidManifest.xml:68:13
+	android:icon
+		ADDED from AndroidManifest.xml:69:13
+	android:name
+		ADDED from AndroidManifest.xml:67:13
+activity#ru.sonic.zabbix.pro.activities.HostListActivity
+ADDED from AndroidManifest.xml:72:9
+	android:label
+		ADDED from AndroidManifest.xml:76:13
+	android:configChanges
+		ADDED from AndroidManifest.xml:74:13
+	android:icon
+		ADDED from AndroidManifest.xml:75:13
+	android:name
+		ADDED from AndroidManifest.xml:73:13
+activity#ru.sonic.zabbix.pro.activities.DHostListActivity
+ADDED from AndroidManifest.xml:78:9
+	android:label
+		ADDED from AndroidManifest.xml:81:13
+	android:icon
+		ADDED from AndroidManifest.xml:80:13
+	android:name
+		ADDED from AndroidManifest.xml:79:13
+activity#ru.sonic.zabbix.pro.activities.ItemListActivity
+ADDED from AndroidManifest.xml:83:9
+	android:label
+		ADDED from AndroidManifest.xml:87:13
+	android:configChanges
+		ADDED from AndroidManifest.xml:85:13
+	android:icon
+		ADDED from AndroidManifest.xml:86:13
+	android:name
+		ADDED from AndroidManifest.xml:84:13
+activity#ru.sonic.zabbix.pro.activities.ItemHistActivity
+ADDED from AndroidManifest.xml:89:9
+	android:label
+		ADDED from AndroidManifest.xml:93:13
+	android:configChanges
+		ADDED from AndroidManifest.xml:91:13
+	android:icon
+		ADDED from AndroidManifest.xml:92:13
+	android:name
+		ADDED from AndroidManifest.xml:90:13
+activity#ru.sonic.zabbix.pro.activities.GraphHostsActivity
+ADDED from AndroidManifest.xml:95:9
+	android:label
+		ADDED from AndroidManifest.xml:99:13
+	android:configChanges
+		ADDED from AndroidManifest.xml:97:13
+	android:icon
+		ADDED from AndroidManifest.xml:98:13
+	android:name
+		ADDED from AndroidManifest.xml:96:13
+activity#ru.sonic.zabbix.pro.activities.GraphsListActivity
+ADDED from AndroidManifest.xml:101:9
+	android:label
+		ADDED from AndroidManifest.xml:105:13
+	android:configChanges
+		ADDED from AndroidManifest.xml:103:13
+	android:icon
+		ADDED from AndroidManifest.xml:104:13
+	android:name
+		ADDED from AndroidManifest.xml:102:13
+activity#ru.sonic.zabbix.pro.activities.ChartActivity
+ADDED from AndroidManifest.xml:107:9
+	android:label
+		ADDED from AndroidManifest.xml:111:13
+	android:configChanges
+		ADDED from AndroidManifest.xml:109:13
+	android:icon
+		ADDED from AndroidManifest.xml:110:13
+	android:name
+		ADDED from AndroidManifest.xml:108:13
+activity#ru.sonic.zabbix.pro.config.ServerListActivity
+ADDED from AndroidManifest.xml:113:9
+	android:label
+		ADDED from AndroidManifest.xml:117:13
+	android:configChanges
+		ADDED from AndroidManifest.xml:115:13
+	android:icon
+		ADDED from AndroidManifest.xml:116:13
+	android:name
+		ADDED from AndroidManifest.xml:114:13
+activity#ru.sonic.zabbix.pro.config.ServerActivity
+ADDED from AndroidManifest.xml:119:9
+	android:label
+		ADDED from AndroidManifest.xml:123:13
+	android:configChanges
+		ADDED from AndroidManifest.xml:121:13
+	android:icon
+		ADDED from AndroidManifest.xml:122:13
+	android:name
+		ADDED from AndroidManifest.xml:120:13
+activity#ru.sonic.zabbix.pro.activities.EventListActivity
+ADDED from AndroidManifest.xml:125:9
+	android:label
+		ADDED from AndroidManifest.xml:129:13
+	android:configChanges
+		ADDED from AndroidManifest.xml:127:13
+	android:icon
+		ADDED from AndroidManifest.xml:128:13
+	android:name
+		ADDED from AndroidManifest.xml:126:13
+activity#ru.sonic.zabbix.pro.activities.MapsListActivity
+ADDED from AndroidManifest.xml:131:9
+	android:label
+		ADDED from AndroidManifest.xml:135:13
+	android:configChanges
+		ADDED from AndroidManifest.xml:133:13
+	android:icon
+		ADDED from AndroidManifest.xml:134:13
+	android:name
+		ADDED from AndroidManifest.xml:132:13
+activity#ru.sonic.zabbix.pro.activities.MapActivity
+ADDED from AndroidManifest.xml:137:9
+	android:label
+		ADDED from AndroidManifest.xml:140:13
+	android:icon
+		ADDED from AndroidManifest.xml:139:13
+	android:name
+		ADDED from AndroidManifest.xml:138:13
+activity#ru.sonic.zabbix.pro.activities.ScreensListActivity
+ADDED from AndroidManifest.xml:142:9
+	android:label
+		ADDED from AndroidManifest.xml:145:13
+	android:icon
+		ADDED from AndroidManifest.xml:144:13
+	android:name
+		ADDED from AndroidManifest.xml:143:13
+activity#ru.sonic.zabbix.pro.activities.ScreenActivity
+ADDED from AndroidManifest.xml:147:9
+	android:label
+		ADDED from AndroidManifest.xml:150:13
+	android:icon
+		ADDED from AndroidManifest.xml:149:13
+	android:name
+		ADDED from AndroidManifest.xml:148:13
+activity#ru.sonic.zabbix.pro.activities.FavoriteGraphsListActivity
+ADDED from AndroidManifest.xml:152:9
+	android:label
+		ADDED from AndroidManifest.xml:155:13
+	android:icon
+		ADDED from AndroidManifest.xml:154:13
+	android:name
+		ADDED from AndroidManifest.xml:153:13
+receiver#ru.sonic.zabbix.pro.service.ZBXCheckRepeetingService
+ADDED from AndroidManifest.xml:158:9
+	android:process
+		ADDED from AndroidManifest.xml:160:13
+	android:name
+		ADDED from AndroidManifest.xml:159:13
+service#ru.sonic.zabbix.pro.service.ZBXCheckService
+ADDED from AndroidManifest.xml:162:9
+	android:enabled
+		ADDED from AndroidManifest.xml:164:13
+	android:exported
+		ADDED from AndroidManifest.xml:165:13
+	android:name
+		ADDED from AndroidManifest.xml:163:13
+receiver#ru.sonic.zabbix.pro.service.ZBXautostartReceiver
+ADDED from AndroidManifest.xml:167:9
+	android:enabled
+		ADDED from AndroidManifest.xml:169:13
+	android:exported
+		ADDED from AndroidManifest.xml:170:13
+	android:name
+		ADDED from AndroidManifest.xml:168:13
+intent-filter#android.intent.action.BOOT_COMPLETED
+ADDED from AndroidManifest.xml:171:13
+action#android.intent.action.BOOT_COMPLETED
+ADDED from AndroidManifest.xml:172:17
+	android:name
+		ADDED from AndroidManifest.xml:172:25
+activity#ru.sonic.zabbix.pro.widget.TxtTriggsWidgetControl
+ADDED from AndroidManifest.xml:176:9
+	android:label
+		ADDED from AndroidManifest.xml:179:13
+	android:icon
+		ADDED from AndroidManifest.xml:178:13
+	android:name
+		ADDED from AndroidManifest.xml:177:13
+intent-filter#android.appwidget.action.APPWIDGET_CONFIGURE
+ADDED from AndroidManifest.xml:180:13
+action#android.appwidget.action.APPWIDGET_CONFIGURE
+ADDED from AndroidManifest.xml:181:17
+	android:name
+		ADDED from AndroidManifest.xml:181:25
+activity#ru.sonic.zabbix.pro.widget.ListWidgetControl
+ADDED from AndroidManifest.xml:184:9
+	android:label
+		ADDED from AndroidManifest.xml:187:13
+	android:icon
+		ADDED from AndroidManifest.xml:186:13
+	android:name
+		ADDED from AndroidManifest.xml:185:13
+activity#ru.sonic.zabbix.pro.widget.GraphWidgetControl
+ADDED from AndroidManifest.xml:192:9
+	android:label
+		ADDED from AndroidManifest.xml:195:13
+	android:icon
+		ADDED from AndroidManifest.xml:194:13
+	android:name
+		ADDED from AndroidManifest.xml:193:13
+service#ru.sonic.zabbix.pro.widget.UpdateWidgetTXTService
+ADDED from AndroidManifest.xml:201:9
+	android:exported
+		ADDED from AndroidManifest.xml:203:13
+	android:name
+		ADDED from AndroidManifest.xml:202:13
+service#ru.sonic.zabbix.pro.widget.UpdateWidgetGraphService
+ADDED from AndroidManifest.xml:204:9
+	android:exported
+		ADDED from AndroidManifest.xml:206:13
+	android:name
+		ADDED from AndroidManifest.xml:205:13
+service#ru.sonic.zabbix.pro.widget.UpdateWidgetListService
+ADDED from AndroidManifest.xml:207:9
+	android:exported
+		ADDED from AndroidManifest.xml:209:13
+	android:permission
+		ADDED from AndroidManifest.xml:210:13
+	android:name
+		ADDED from AndroidManifest.xml:208:13
+service#ru.sonic.zabbix.pro.widget.ListWidgetRVService
+ADDED from AndroidManifest.xml:211:9
+	android:permission
+		ADDED from AndroidManifest.xml:213:13
+	android:name
+		ADDED from AndroidManifest.xml:212:13
+receiver#ru.sonic.zabbix.pro.widget.TxtTriggsWidgetProvider
+ADDED from AndroidManifest.xml:215:9
+	android:label
+		ADDED from AndroidManifest.xml:217:13
+	android:name
+		ADDED from AndroidManifest.xml:216:13
+intent-filter#android.appwidget.action.ACTION_WIDGET_REFRESH+android.appwidget.action.ACTION_WIDGET_SETTINGS+android.appwidget.action.ACTION_WIDGET_TRIGGERSLIST+android.appwidget.action.APPWIDGET_NEXTTRIGGER+android.appwidget.action.APPWIDGET_UPDATE
+ADDED from AndroidManifest.xml:218:13
+action#android.appwidget.action.APPWIDGET_UPDATE
+ADDED from AndroidManifest.xml:219:17
+	android:name
+		ADDED from AndroidManifest.xml:219:25
+action#android.appwidget.action.ACTION_WIDGET_REFRESH
+ADDED from AndroidManifest.xml:220:17
+	android:name
+		ADDED from AndroidManifest.xml:220:25
+action#android.appwidget.action.ACTION_WIDGET_SETTINGS
+ADDED from AndroidManifest.xml:221:17
+	android:name
+		ADDED from AndroidManifest.xml:221:25
+action#android.appwidget.action.ACTION_WIDGET_TRIGGERSLIST
+ADDED from AndroidManifest.xml:222:17
+	android:name
+		ADDED from AndroidManifest.xml:222:25
+action#android.appwidget.action.APPWIDGET_NEXTTRIGGER
+ADDED from AndroidManifest.xml:223:17
+	android:name
+		ADDED from AndroidManifest.xml:223:25
+data
+ADDED from AndroidManifest.xml:224:17
+	android:scheme
+		ADDED from AndroidManifest.xml:224:23
+intent-filter#android.appwidget.action.APPWIDGET_UPDATE
+ADDED from AndroidManifest.xml:226:13
+intent-filter#ZABBIX_UPDATE
+ADDED from AndroidManifest.xml:230:13
+action#ZABBIX_UPDATE
+ADDED from AndroidManifest.xml:231:17
+	android:name
+		ADDED from AndroidManifest.xml:231:25
+meta-data#android.appwidget.provider
+ADDED from AndroidManifest.xml:234:13
+	android:resource
+		ADDED from AndroidManifest.xml:236:17
+	android:name
+		ADDED from AndroidManifest.xml:235:17
+receiver#ru.sonic.zabbix.pro.widget.GraphWidgetProvider
+ADDED from AndroidManifest.xml:238:9
+	android:label
+		ADDED from AndroidManifest.xml:240:13
+	android:name
+		ADDED from AndroidManifest.xml:239:13
+receiver#ru.sonic.zabbix.pro.widget.ListWidgetProvider
+ADDED from AndroidManifest.xml:252:9
+	android:label
+		ADDED from AndroidManifest.xml:254:13
+	android:name
+		ADDED from AndroidManifest.xml:253:13
+activity#ru.sonic.zabbix.pro.ZControl.ProxiesActivity
+ADDED from AndroidManifest.xml:267:9
+	android:label
+		ADDED from AndroidManifest.xml:271:13
+	android:configChanges
+		ADDED from AndroidManifest.xml:269:13
+	android:icon
+		ADDED from AndroidManifest.xml:270:13
+	android:name
+		ADDED from AndroidManifest.xml:268:13
+activity#ru.sonic.zabbix.pro.ZControl.ZControlActivity
+ADDED from AndroidManifest.xml:273:9
+	android:label
+		ADDED from AndroidManifest.xml:277:13
+	android:configChanges
+		ADDED from AndroidManifest.xml:275:13
+	android:icon
+		ADDED from AndroidManifest.xml:276:13
+	android:name
+		ADDED from AndroidManifest.xml:274:13
+activity#ru.sonic.zabbix.pro.ZControl.ScreensListActivity
+ADDED from AndroidManifest.xml:279:9
+	android:label
+		ADDED from AndroidManifest.xml:283:13
+	android:configChanges
+		ADDED from AndroidManifest.xml:281:13
+	android:icon
+		ADDED from AndroidManifest.xml:282:13
+	android:name
+		ADDED from AndroidManifest.xml:280:13
+activity#ru.sonic.zabbix.pro.ZControl.ScreenActivity
+ADDED from AndroidManifest.xml:285:9
+	android:label
+		ADDED from AndroidManifest.xml:289:13
+	android:configChanges
+		ADDED from AndroidManifest.xml:287:13
+	android:icon
+		ADDED from AndroidManifest.xml:288:13
+	android:name
+		ADDED from AndroidManifest.xml:286:13
+activity#ru.sonic.zabbix.pro.ZControl.UsersActivity
+ADDED from AndroidManifest.xml:291:9
+	android:label
+		ADDED from AndroidManifest.xml:295:13
+	android:configChanges
+		ADDED from AndroidManifest.xml:293:13
+	android:icon
+		ADDED from AndroidManifest.xml:294:13
+	android:name
+		ADDED from AndroidManifest.xml:292:13
+activity#ru.sonic.zabbix.pro.ZControl.UserCreateActivity
+ADDED from AndroidManifest.xml:297:9
+	android:label
+		ADDED from AndroidManifest.xml:301:13
+	android:configChanges
+		ADDED from AndroidManifest.xml:299:13
+	android:icon
+		ADDED from AndroidManifest.xml:300:13
+	android:name
+		ADDED from AndroidManifest.xml:298:13
+activity#ru.sonic.zabbix.pro.ZControl.UserGroupsActivity
+ADDED from AndroidManifest.xml:303:9
+	android:label
+		ADDED from AndroidManifest.xml:307:13
+	android:configChanges
+		ADDED from AndroidManifest.xml:305:13
+	android:icon
+		ADDED from AndroidManifest.xml:306:13
+	android:name
+		ADDED from AndroidManifest.xml:304:13
+activity#ru.sonic.zabbix.pro.ZControl.TemplatesActivity
+ADDED from AndroidManifest.xml:309:9
+	android:label
+		ADDED from AndroidManifest.xml:313:13
+	android:configChanges
+		ADDED from AndroidManifest.xml:311:13
+	android:icon
+		ADDED from AndroidManifest.xml:312:13
+	android:name
+		ADDED from AndroidManifest.xml:310:13
+activity#ru.sonic.zabbix.pro.ZControl.ApplicationsActivity
+ADDED from AndroidManifest.xml:315:9
+	android:label
+		ADDED from AndroidManifest.xml:319:13
+	android:configChanges
+		ADDED from AndroidManifest.xml:317:13
+	android:icon
+		ADDED from AndroidManifest.xml:318:13
+	android:name
+		ADDED from AndroidManifest.xml:316:13
+activity#ru.sonic.zabbix.pro.ZControl.ScriptsActivity
+ADDED from AndroidManifest.xml:321:9
+	android:label
+		ADDED from AndroidManifest.xml:325:13
+	android:configChanges
+		ADDED from AndroidManifest.xml:323:13
+	android:icon
+		ADDED from AndroidManifest.xml:324:13
+	android:name
+		ADDED from AndroidManifest.xml:322:13
+activity#ru.sonic.zabbix.pro.ZControl.ActionsListActivity
+ADDED from AndroidManifest.xml:327:9
+	android:label
+		ADDED from AndroidManifest.xml:331:13
+	android:configChanges
+		ADDED from AndroidManifest.xml:329:13
+	android:icon
+		ADDED from AndroidManifest.xml:330:13
+	android:name
+		ADDED from AndroidManifest.xml:328:13
+activity#ru.sonic.zabbix.pro.ZControl.HostControlActivity
+ADDED from AndroidManifest.xml:333:9
+	android:label
+		ADDED from AndroidManifest.xml:337:13
+	android:configChanges
+		ADDED from AndroidManifest.xml:335:13
+	android:icon
+		ADDED from AndroidManifest.xml:336:13
+	android:name
+		ADDED from AndroidManifest.xml:334:13
+activity#ru.sonic.zabbix.pro.ZControl.HostCreateActivity
+ADDED from AndroidManifest.xml:339:9
+	android:label
+		ADDED from AndroidManifest.xml:343:13
+	android:configChanges
+		ADDED from AndroidManifest.xml:341:13
+	android:icon
+		ADDED from AndroidManifest.xml:342:13
+	android:name
+		ADDED from AndroidManifest.xml:340:13
+activity#ru.sonic.zabbix.pro.ZControl.HostGroupsControl
+ADDED from AndroidManifest.xml:345:9
+	android:label
+		ADDED from AndroidManifest.xml:349:13
+	android:configChanges
+		ADDED from AndroidManifest.xml:347:13
+	android:icon
+		ADDED from AndroidManifest.xml:348:13
+	android:name
+		ADDED from AndroidManifest.xml:346:13
+activity#ru.sonic.zabbix.pro.ZControl.MediatypeControlActivity
+ADDED from AndroidManifest.xml:351:9
+	android:label
+		ADDED from AndroidManifest.xml:355:13
+	android:configChanges
+		ADDED from AndroidManifest.xml:353:13
+	android:icon
+		ADDED from AndroidManifest.xml:354:13
+	android:name
+		ADDED from AndroidManifest.xml:352:13
+activity#ru.sonic.zabbix.pro.ZControl.MaintencesListActivity
+ADDED from AndroidManifest.xml:357:9
+	android:label
+		ADDED from AndroidManifest.xml:361:13
+	android:configChanges
+		ADDED from AndroidManifest.xml:359:13
+	android:icon
+		ADDED from AndroidManifest.xml:360:13
+	android:name
+		ADDED from AndroidManifest.xml:358:13
+uses-permission#android.permission.INTERNET
+ADDED from AndroidManifest.xml:366:5
+	android:name
+		ADDED from AndroidManifest.xml:366:22
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from AndroidManifest.xml:367:5
+	android:name
+		ADDED from AndroidManifest.xml:367:22
+uses-permission#android.permission.VIBRATE
+ADDED from AndroidManifest.xml:368:5
+	android:name
+		ADDED from AndroidManifest.xml:368:22
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from AndroidManifest.xml:369:5
+	android:name
+		ADDED from AndroidManifest.xml:369:22
+uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
+ADDED from AndroidManifest.xml:370:5
+	android:name
+		ADDED from AndroidManifest.xml:370:22
+uses-permission#com.android.vending.BILLING
+ADDED from AndroidManifest.xml:371:5
+	android:name
+		ADDED from AndroidManifest.xml:371:22

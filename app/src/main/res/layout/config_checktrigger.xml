@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF" >
+
+    <PreferenceCategory android:title="@string/acknowledge_config" >
+
+        <CheckBoxPreference
+            android:key="showunaskonly"
+            android:summary="@string/show_only_unacknowledged_triggers"
+            android:title="@string/hide_acknowledged" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/maintence" >
+
+        <CheckBoxPreference
+            android:key="triggercheck_maintenance"
+            android:summary="@string/maintence_summary"
+            android:title="@string/hide_maintence" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/custom_check_config" >
+
+        <ListPreference
+            android:defaultValue="1"
+            android:entries="@array/TriggerCheckTypes"
+            android:entryValues="@array/TriggerCheckTypesValues"
+            android:key="check_type"
+            android:summary="@string/type_of_trigger_checks"
+            android:title="@string/triggers_check_type" />
+
+        <EditTextPreference
+            android:defaultValue="10"
+            android:dialogMessage="@string/show_active_triggers_for_time"
+            android:dialogTitle="@string/time_actime"
+            android:inputType="number"
+            android:key="activetriggertime"
+            android:summary="@string/custom_time_period_expanded"
+            android:title="@string/custom_time_period" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/triggers_filter" >
+
+        <ListPreference
+            android:defaultValue="3"
+            android:entries="@array/TriggerTypes"
+            android:entryValues="@array/TriggerTypesValues"
+            android:key="trigger_filter"
+            android:summary="@string/triggers_filter"
+            android:title="@string/triggers_filter" />
+        
+        <ListPreference
+            android:defaultValue="0"
+            android:entries="@array/serevity"
+            android:entryValues="@array/serevity_values"
+            android:key="min_severity"
+            android:summary="@string/triggers_filter_severity"
+            android:title="@string/triggers_filter_severity_title" />
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="sort_triggers"
+            android:summary="@string/sort_triggers_by_status"
+            android:title="@string/sort_triggers" />
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="hide_dependences"
+            android:summary="@string/hide_dependences_expanded"
+            android:title="@string/hide_dependences" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

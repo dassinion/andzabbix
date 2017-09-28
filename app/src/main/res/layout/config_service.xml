@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF" >
+
+    <PreferenceCategory android:title="@string/run" >
+
+        <CheckBoxPreference
+            android:key="service_enable"
+            android:summary="@string/enable_service"
+            android:title="@string/background_checks" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/updating_config" >
+
+        <ListPreference
+            android:defaultValue="30"
+            android:entries="@array/UpdateIntervalsString"
+            android:entryValues="@array/UpdateIntervals"
+            android:key="service_update_interval"
+            android:summary="@string/update_interval"
+            android:title="@string/service_update_interval" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/filter" >
+
+        <ListPreference
+            android:defaultValue="1"
+            android:entries="@array/serevity"
+            android:entryValues="@array/serevity_values"
+            android:key="alert_severity"
+            android:summary="@string/severity"
+            android:title="@string/severity" />
+
+        <CheckBoxPreference
+            android:key="service_maintemce"
+            android:summary="@string/maintence_summary"
+            android:title="@string/hide_maintence" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/alerts" >
+
+        <CheckBoxPreference
+            android:key="service_alert_sound"
+            android:summary="@string/enable_sound_alert"
+            android:title="@string/sound_alert" />
+
+        <CheckBoxPreference
+            android:key="service_alert_sound_custom_melody"
+            android:summary="@string/enable_custom_sound"
+            android:title="@string/custom_sound_alert" />
+
+        <ListPreference
+            android:dialogTitle="@string/custom_sound_alert"
+            android:key="service_alert_sound_melody"
+            android:summary="@string/chose_custom_sound_alert"
+            android:title="@string/set_custom_sound_alert" />
+
+        <CheckBoxPreference
+            android:key="service_alert_led"
+            android:summary="@string/enable_led_indicator"
+            android:title="@string/alert_led_indicator" />
+
+        <CheckBoxPreference
+            android:key="service_alert_vibration"
+            android:summary="@string/enable_vibration_alert"
+            android:title="@string/vibration_alert" />
+    </PreferenceCategory>
+
+</PreferenceScreen>
