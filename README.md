@@ -15,7 +15,7 @@ Features:
 
 Donations
 ---------
-To support development of this project to the original author (zone117x), feel free to donate :)
+To support development of this project to the original author (dassinion), feel free to donate :)
 
 * BTC: `1JsoXNsPkogVvm28EJoJbFBYfnfdwYZYbL`
 * LTC: `Lhj43AqqyM8xoH5jmErALivxy6onxkifAJ`
